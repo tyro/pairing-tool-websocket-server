@@ -1,4 +1,4 @@
-# pairing-tool-websocket-server
+# pairing-tool-websocket-server [![Build Status](https://www.travis-ci.com/tyro/pairing-tool-websocket-server.svg?branch=master)](https://www.travis-ci.com/tyro/pairing-tool-websocket-server)
 
 This tool is intended for smaller teams who wish to use the [pairing tool](https://github.com/tyro/pairing-tool) who do not want the complexity of a kafka server.
 
