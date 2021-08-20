@@ -1,0 +1,16 @@
+sudo: required
+
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: build
+      script:
+        - make build
+
+deploy:
+  - provider: script
+    script: bash scripts/deploy.sh $TRAVIS_TAG
+    on:
+      tags: true

@@ -10,6 +10,7 @@ COPY . .
 
 FROM gcr.io/distroless/nodejs:14 as runner
 
+MAINTAINER Tyro "open-source@tyro.com"
 WORKDIR /usr/src/app
 
 ENV PORT=4001
