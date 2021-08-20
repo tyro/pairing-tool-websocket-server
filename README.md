@@ -1,8 +1,19 @@
-# pairing-tool-websocket-server [![Build Status](https://www.travis-ci.com/tyro/pairing-tool-websocket-server.svg?branch=master)](https://www.travis-ci.com/tyro/pairing-tool-websocket-server)
+# pairing-tool-websocket-server
 
 This tool is intended for smaller teams who wish to use the [pairing tool](https://github.com/tyro/pairing-tool) who do not want the complexity of a kafka server.
 
-## How to Run
+## How to Run docker hub image
+
+```bash
+docker run -it -p 4001:4001 tyro/pairing-tool-websocket-server
+```
+
+Using the default port
+```bash
+docker run -it -p 4001:4001 tyro/pairing-tool-websocket-server
+```
+
+## How to Run your local image
 
 Build the image
 ```bash
@@ -17,6 +28,20 @@ docker run -it -p 4001:4001 pairing-tool-websocket-server:node-alpha-1
 Using a different port
 ```bash
 docker run -it -e PORT=4002 -p 4002:4002 pairing-tool-websocket-server:node-alpha-1
+```
+
+## Releasing
+
+```bash
+export DOCKERHUB_USER=<username>
+read -s DOCKERHUB_PASS
+
+export DOCKERHUB_PASS
+
+./scripts/deploy.sh <tag>
+
+git tag <tag>
+git push --tags
 ```
 
 ## Copyright and Licensing
