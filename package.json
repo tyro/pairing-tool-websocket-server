@@ -8,5 +8,8 @@
   },
   "scripts": {
     "run": "node index.js"
+  },
+  "devDependencies": {
+    "copyright-header": "^0.4.6"
   }
 }
