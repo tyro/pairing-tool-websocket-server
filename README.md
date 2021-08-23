@@ -19,17 +19,17 @@ docker run -e PORT=4002 -p 4002:4002 tyro/pairing-tool-websocket-server
 
 Build the image
 ```bash
-docker build . -t pairing-tool-websocket-server:node-alpha-1
+docker build . -t tyro/pairing-tool-websocket-server:local
 ```
 
 Using the default port
 ```bash
-docker run -it -p 4001:4001 pairing-tool-websocket-server:node-alpha-1
+docker run -it -p 4001:4001 tyro/pairing-tool-websocket-server:local
 ```
 
 Using a different port
 ```bash
-docker run -it -e PORT=4002 -p 4002:4002 pairing-tool-websocket-server:node-alpha-1
+docker run -it -e PORT=4002 -p 4002:4002 tyro/pairing-tool-websocket-server:local
 ```
 
 ## Releasing
@@ -48,7 +48,7 @@ git push --tags
 
 ## Copyright and Licensing
 
-Copyright 2020 Tyro Payments Limited
+Copyright 2021 Tyro Payments Limited
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
