@@ -1,0 +1,19 @@
+apiVersion: tyro.cloud/v1alpha1
+kind: Schooner
+metadata:
+  name: banking-pairing-tool-websocket-server
+  namespace: banking
+spec:
+  team: everything_is_fine
+  version: "{{ .Values.build.number }}"
+  alternateImageName: banking-pairing-tool-websocket-server
+  autoscale:
+    sqs:
+      name: banking-accounts-search-queue
+      messagesPerInstance: 100000
+  connectivity:
+    from:
+      external:
+        private:
+          - path: "/*"
+            methods: ["GET", "POST"]
