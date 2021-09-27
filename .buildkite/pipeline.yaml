@@ -1,0 +1,10 @@
+env:
+  BUILDKITE_CLEAN_CHECKOUT: true
+
+steps:
+
+  - name: ":jenkins:"
+    plugins:
+      - ssh://git@github.com/tyro-private/buildkite-pipeline-shared-library#v2.0:
+          team-name: everything-is-fine
+          image-name: banking-pairing-tool-websocket-server
