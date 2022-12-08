@@ -2,7 +2,7 @@
   "name": "web-socket-node",
   "version": "1.0.0",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "http-errors": "^1.8.1",
     "socket.io": "^4.4.0"
   },
